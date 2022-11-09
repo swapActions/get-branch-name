@@ -10,8 +10,11 @@ runs:
     - id: get-branch
       run: |
         # Extract branch name
-         BRANCH_NAME=${GITHUB_REF#refs/heads/}
+        BRANCH_NAME=${GITHUB_REF#refs/heads/}
 
-         # set output variable accessible in the action
-         echo "branch=${BRANCH_NAME}" >> $GITHUB_OUTPUT
+        # Console log branch name
+        echo "Get branch name: ${BRANCH_NAME}"
+
+        # set output variable accessible in the action
+        echo "branch=${BRANCH_NAME}" >> $GITHUB_OUTPUT
       shell: bash
