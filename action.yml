@@ -1,7 +1,7 @@
 name: "Get branch name"
 description: "Get current branch name"
 outputs:
-  branch-name:
+  branch:
     description: "The name of the current branch"
     value: ${{ steps.get-branch.outputs.branch }}
 runs:
